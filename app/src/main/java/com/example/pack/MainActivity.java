@@ -1,26 +1,21 @@
 package com.example.pack;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
-import dalvik.system.DexFile;
 
-public class MainActivity extends AppCompatActivity
+public class MainActivity extends Activity
 {
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
+
         setContentView(R.layout.activity_main);
         Log.i("source", "[source-onCreate] =>i am source apk" );
         findViewById(R.id.bt1).setOnClickListener(new View.OnClickListener() {

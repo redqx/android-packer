@@ -21,7 +21,6 @@ dependencyResolutionManagement {
 
 rootProject.name = "pack"
 include ':app'
-include ':by_java_packapk_v_1'
-include ':by_java_packapk_v_2'
 include ':gen1_v1'
 include ':gen1_v1_native'
+include ':gen1_v2'

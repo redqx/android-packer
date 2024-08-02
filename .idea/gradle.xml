@@ -10,10 +10,9 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/by_java_packapk_v_1" />
-            <option value="$PROJECT_DIR$/by_java_packapk_v_2" />
             <option value="$PROJECT_DIR$/gen1_v1" />
             <option value="$PROJECT_DIR$/gen1_v1_native" />
+            <option value="$PROJECT_DIR$/gen1_v2" />
           </set>
         </option>
         <option name="resolveExternalAnnotations" value="false" />
