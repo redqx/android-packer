@@ -45,15 +45,13 @@ public class ProxyApplication extends Application {
     {
 
         super.attachBaseContext(base);
-
-
-
         try {
             //在应用程序的数据存储目录下创建文件夹，具体路径为data/user/0/包名/app_payload_dex(怎么多了app_?)
             File dex = getDir("payload_dex", MODE_PRIVATE);
             File lib = getDir("payload_lib", MODE_PRIVATE);
             dexPath = dex.getAbsolutePath();
             libPath = lib.getAbsolutePath();
+
             apkFileName = dex.getAbsolutePath() + File.separator + "Source.apk";
             // 根据文件路径创建File对象 和以前分析的差不多
             File dexFile = new File(apkFileName);
