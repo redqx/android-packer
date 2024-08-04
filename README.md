@@ -14,7 +14,9 @@ gen1_v2
 
 
 
->  app 
+
+
+>  app(com.example.pack)
 
 原始的待加壳项目, 主要功能是activity显示一个图片, 布局中有个按钮
 
@@ -107,7 +109,49 @@ public class MyApplication extends Application {
 
 
 
+这种壳的大概原理一般长这样
+
+![image-20240804140456228](https://raw.githubusercontent.com/redqx/pack/master/img/image-20240804140456228.png)
+
+对org_apk解包, 拿出其中的org_dex
+
+把org_dex,dex_loader,原org_dex长度(4字节) 整合为一个新的dex
+
+然后把新的dex 替换掉原org_apk的org_dex
+
+对org_apk再签名即可
+
+
+
+感觉解包,整合,签名太麻烦,于是我换了一种形式,主要目的是学习动态加载dex
+
+![image-20240804140956617](https://raw.githubusercontent.com/redqx/pack/master/img/image-20240804140956617.png)
+
+值得注意的是org_apk项目1和org_apk项目2是同一个项目的不同内容
+
+大概步骤写一org_apk的项目, 功能及代码和com.example.pack项目差不多.
+
+然后生成apk文件,提取其中的dex文件, 有很多dex, 只提取我们写的逻辑对应的dex, 也就是MainActivity的classes.dex
+
+然后把classes.dex存放到项目资源的asset目录中,
+
+然后删除所有java源代码文件,, 添加ProxyApplication.java, 并实现ProxyApplication的内容
+
+在org_apk中的AndroidManifest.xml中添加 `android:name=".ProxyApplication"`
+
+然后编译生成项目.
+
+壳在运行时会读取自身asset目录下的classes.dex,以及读取自身的资源文件, 完成dex和资源的加载.
+
+
+
+
+
 ### 1), **gen1_v1**
+
+加载asset目录下的classes3.dex并执行它
+
+
 
 来源于项目[simplepack:一个简单完整的Android apk壳程序](https://github.com/dreamxgn/simplepack)的学习, 大多数是copy代码,然后理解代码
 
@@ -158,13 +202,21 @@ dexClassLoader=new InMemoryDexClassLoader( //安卓8.0引入的api,允许从内�
 
 ### 2), **gen1_v1_native**
 
+加载asset目录下的classes3.dex并执行它
+
 仍然来源于项目[simplepack:一个简单完整的Android apk壳程序](https://github.com/dreamxgn/simplepack)的学习,  
 
 项目是native实现的,我就copy代码, 理解代码. 修改了一下代码.
 
 结果: 实验成功, 可以达到原始效果,
 
+缺点之一: 
+
+- 原始的`com.example.pack.MyApplication`没有得到执行
+
 ### 3), **gen1_v1_1**
+
+加载asset目录下的dex.zip并执行它
 
 来源于项目[apkjiagu-对apk进行加固](https://github.com/zhang-hai/apkjiagu)的学习, 理解代码并转换为自己的工程
 
@@ -226,6 +278,8 @@ libPath是当前apk的so路径, 比如是/data/app/~~Ox_xqQ1MVFd4RhrEVU11nw==/co
 
 
 ### 4), **gen1_v2**
+
+加载asset目录下的app-debug.zip并执行它
 
 这是加载完整的apk了, 不是加载纯粹的dex.zip或者dex文件
 
@@ -296,3 +350,11 @@ public class MainActivity extends Activity
 然后再去加载,就发现出现了一个莫名其妙的activity布局,(还包含一个按钮,不知道哪里来的activity)
 
 ![image-20240803163322917](https://raw.githubusercontent.com/redqx/pack/master/img/image-20240803163322917.png)
+
+##  二代壳学习: 函数抽取壳
+
+
+
+分析文章: https://www.52pojie.cn/thread-1576245-1-1.html
+
+项目地址：https://github.com/luoyesiqiu/dpt-shell
