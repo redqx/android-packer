@@ -1,0 +1,73 @@
+Determining if the getrandom exist failed with the following output:
+Change Dir: C:/mm_dqx/github/redqx/android-packer/packer/gen1_v1/shell/.cxx/Debug/1x11b5e5/arm64-v8a/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:\Users\tinyx\AppData\Local\Android\Sdk\cmake\3.18.1\bin\ninja.exe cmTC_e294c && [1/2] Building C object CMakeFiles/cmTC_e294c.dir/CheckSymbolExists.c.o
+FAILED: CMakeFiles/cmTC_e294c.dir/CheckSymbolExists.c.o 
+C:\Users\tinyx\AppData\Local\Android\Sdk\ndk\21.4.7075529\toolchains\llvm\prebuilt\windows-x86_64\bin\clang.exe --target=aarch64-none-linux-android21 --gcc-toolchain=C:/Users/tinyx/AppData/Local/Android/Sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=C:/Users/tinyx/AppData/Local/Android/Sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/windows-x86_64/sysroot   -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -fPIE -MD -MT CMakeFiles/cmTC_e294c.dir/CheckSymbolExists.c.o -MF CMakeFiles\cmTC_e294c.dir\CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_e294c.dir/CheckSymbolExists.c.o -c CheckSymbolExists.c
+CheckSymbolExists.c:8:19: error: use of undeclared identifier 'getrandom'
+  return ((int*)(&getrandom))[argc];
+                  ^
+1 error generated.
+ninja: build stopped: subcommand failed.
+
+
+File C:/mm_dqx/github/redqx/android-packer/packer/gen1_v1/shell/.cxx/Debug/1x11b5e5/arm64-v8a/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <sys/random.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef getrandom
+  return ((int*)(&getrandom))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Performing C SOURCE FILE Test Iconv_IS_BUILT_IN failed with the following output:
+Change Dir: C:/mm_dqx/github/redqx/android-packer/packer/gen1_v1/shell/.cxx/Debug/1x11b5e5/arm64-v8a/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:\Users\tinyx\AppData\Local\Android\Sdk\cmake\3.18.1\bin\ninja.exe cmTC_c2b4e && [1/2] Building C object CMakeFiles/cmTC_c2b4e.dir/src.c.o
+src.c:8:14: warning: implicit declaration of function 'iconv_open' is invalid in C99 [-Wimplicit-function-declaration]
+        ic = iconv_open("to", "from");
+             ^
+src.c:8:12: warning: incompatible integer to pointer conversion assigning to 'iconv_t' (aka 'struct __iconv_t *') from 'int' [-Wint-conversion]
+        ic = iconv_open("to", "from");
+           ^ ~~~~~~~~~~~~~~~~~~~~~~~~
+src.c:9:9: warning: implicit declaration of function 'iconv' is invalid in C99 [-Wimplicit-function-declaration]
+        iconv(ic, &a, &i, &b, &j);
+        ^
+src.c:10:9: warning: implicit declaration of function 'iconv_close' is invalid in C99 [-Wimplicit-function-declaration]
+        iconv_close(ic);
+        ^
+4 warnings generated.
+[2/2] Linking C executable cmTC_c2b4e
+FAILED: cmTC_c2b4e 
+cmd.exe /C "cd . && C:\Users\tinyx\AppData\Local\Android\Sdk\ndk\21.4.7075529\toolchains\llvm\prebuilt\windows-x86_64\bin\clang.exe --target=aarch64-none-linux-android21 --gcc-toolchain=C:/Users/tinyx/AppData/Local/Android/Sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=C:/Users/tinyx/AppData/Local/Android/Sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/windows-x86_64/sysroot -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -DIconv_IS_BUILT_IN -Wl,--exclude-libs,libgcc.a -Wl,--exclude-libs,libgcc_real.a -Wl,--exclude-libs,libatomic.a -static-libstdc++ -Wl,--build-id -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments -Wl,--gc-sections CMakeFiles/cmTC_c2b4e.dir/src.c.o -o cmTC_c2b4e  -latomic -lm && cd ."
+CMakeFiles/cmTC_c2b4e.dir/src.c.o: In function `main':
+C:\mm_dqx\github\redqx\android-packer\packer\gen1_v1\shell\.cxx\Debug\1x11b5e5\arm64-v8a\CMakeFiles\CMakeTmp/src.c:8: undefined reference to `iconv_open'
+C:\mm_dqx\github\redqx\android-packer\packer\gen1_v1\shell\.cxx\Debug\1x11b5e5\arm64-v8a\CMakeFiles\CMakeTmp/src.c:9: undefined reference to `iconv'
+C:\mm_dqx\github\redqx\android-packer\packer\gen1_v1\shell\.cxx\Debug\1x11b5e5\arm64-v8a\CMakeFiles\CMakeTmp/src.c:10: undefined reference to `iconv_close'
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+ninja: build stopped: subcommand failed.
+
+
+Source file was:
+
+      #include <stddef.h>
+      #include <iconv.h>
+      int main() {
+        char *a, *b;
+        size_t i, j;
+        iconv_t ic;
+        ic = iconv_open("to", "from");
+        iconv(ic, &a, &i, &b, &j);
+        iconv_close(ic);
+      }
+      
+Checking whether the ASM compiler is GNU using "--version" did not match "(GNU assembler)|(GCC)|(Free Software Foundation)":
+Android (7019983 based on r365631c3) clang version 9.0.9 (https://android.googlesource.com/toolchain/llvm-project a2a1e703c0edb03ba29944e529ccbf457742737b) (based on LLVM 9.0.9svn)
+Target: x86_64-w64-windows-gnu
+Thread model: posix
+InstalledDir: C:/Users/tinyx/AppData/Local/Android/Sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/windows-x86_64/bin

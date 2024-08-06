@@ -1,0 +1,7 @@
+Executable : C:\Users\tinyx\AppData\Local\Android\Sdk\cmake\3.18.1\bin\ninja.exe
+arguments : 
+-C
+C:\Users\tinyx\Downloads\gen1_v1\shell\.cxx\RelWithDebInfo\4v642d3m\armeabi-v7a
+dpt
+jvmArgs : 
+

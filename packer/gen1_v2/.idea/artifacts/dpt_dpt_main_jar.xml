@@ -1,0 +1,18 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="dpt.dpt.main:jar">
+    <output-path>$PROJECT_DIR$/build/classes/artifacts/dpt_dpt_main_jar</output-path>
+    <root id="archive" name="dpt.dpt.main.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="module-output" name="dpt.dpt.main" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/dpt/libs/dx.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/dpt/libs/ManifestEditor-1.0.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.lingala.zip4j/zip4j/2.11.5/4214e396e3891cb19eded3ce5e584cba9032fdc3/zip4j-2.11.5.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/dpt/libs/commons-cli-1.5.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/dpt/libs/org.json.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/dpt/libs/zipalign-java-1.0.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/dpt/libs/apksigner.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

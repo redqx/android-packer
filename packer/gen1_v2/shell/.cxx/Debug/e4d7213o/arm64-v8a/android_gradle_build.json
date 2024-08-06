@@ -1,0 +1,49 @@
+{
+  "buildFiles": [
+    "C:\\mm_dqx\\github\\redqx\\android-packer\\packer\\gen1_v2\\shell\\src\\main\\cpp\\CMakeLists.txt",
+    "C:\\mm_dqx\\github\\redqx\\android-packer\\packer\\gen1_v2\\shell\\src\\main\\cpp\\minizip-ng\\cmake\\clone-repo.cmake",
+    "C:\\mm_dqx\\github\\redqx\\android-packer\\packer\\gen1_v2\\shell\\src\\main\\cpp\\minizip-ng\\cmake\\FindZLIBNG.cmake",
+    "C:\\mm_dqx\\github\\redqx\\android-packer\\packer\\gen1_v2\\shell\\src\\main\\cpp\\minizip-ng\\CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "C:\\Users\\tinyx\\AppData\\Local\\Android\\Sdk\\cmake\\3.18.1\\bin\\ninja.exe",
+      "-C",
+      "C:\\mm_dqx\\github\\redqx\\android-packer\\packer\\gen1_v2\\shell\\.cxx\\Debug\\e4d7213o\\arm64-v8a",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "C:\\Users\\tinyx\\AppData\\Local\\Android\\Sdk\\cmake\\3.18.1\\bin\\ninja.exe",
+    "-C",
+    "C:\\mm_dqx\\github\\redqx\\android-packer\\packer\\gen1_v2\\shell\\.cxx\\Debug\\e4d7213o\\arm64-v8a",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "dpt::@6890427a1f51a3e7e1df": {
+      "toolchain": "toolchain",
+      "abi": "arm64-v8a",
+      "artifactName": "dpt",
+      "output": "C:\\mm_dqx\\github\\redqx\\android-packer\\packer\\gen1_v2\\shell\\build\\intermediates\\cxx\\Debug\\e4d7213o\\obj\\arm64-v8a\\libdpt.so",
+      "runtimeFiles": []
+    },
+    "minizip::@c47135bf46b0b9fc18be": {
+      "toolchain": "toolchain",
+      "abi": "arm64-v8a",
+      "artifactName": "minizip",
+      "output": "C:\\mm_dqx\\github\\redqx\\android-packer\\packer\\gen1_v2\\shell\\.cxx\\Debug\\e4d7213o\\arm64-v8a\\minizip-ng\\libminizip.a"
+    }
+  },
+  "toolchains": {
+    "toolchain": {
+      "cCompilerExecutable": "C:\\Users\\tinyx\\AppData\\Local\\Android\\Sdk\\ndk\\21.4.7075529\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang.exe",
+      "cppCompilerExecutable": "C:\\Users\\tinyx\\AppData\\Local\\Android\\Sdk\\ndk\\21.4.7075529\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe"
+    }
+  },
+  "cFileExtensions": [
+    "c"
+  ],
+  "cppFileExtensions": [
+    "cpp"
+  ]
+}

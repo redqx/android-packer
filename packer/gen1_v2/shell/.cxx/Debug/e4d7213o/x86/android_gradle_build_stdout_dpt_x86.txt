@@ -1,0 +1,39 @@
+ninja: Entering directory `C:\mm_dqx\github\redqx\android-packer\packer\gen1_v2\shell\.cxx\Debug\e4d7213o\x86'
+[1/31] Building CXX object CMakeFiles/dpt.dir/dex/dex_file.cpp.o
+[2/31] Building CXX object CMakeFiles/dpt.dir/dex/CodeItem.cpp.o
+[3/31] Building CXX object CMakeFiles/dpt.dir/dpt_util.cpp.o
+[4/31] Building CXX object CMakeFiles/dpt.dir/dex/MultiDexCode.cpp.o
+[5/31] Building CXX object CMakeFiles/dpt.dir/reflect/java_util_ArrayList.cpp.o
+[6/31] Building CXX object CMakeFiles/dpt.dir/reflect/android_app_LoadedApk.cpp.o
+[7/31] Building CXX object CMakeFiles/dpt.dir/reflect/dalvik_system_DexPathList.cpp.o
+[8/31] Building CXX object CMakeFiles/dpt.dir/reflect/dalvik_system_BaseDexClassLoader.cpp.o
+[9/31] Building CXX object CMakeFiles/dpt.dir/reflect/java_io_File.cpp.o
+[10/31] Building CXX object CMakeFiles/dpt.dir/reflect/java_lang_Class.cpp.o
+[11/31] Building CXX object CMakeFiles/dpt.dir/reflect/android_content_pm_ApplicationInfo.cpp.o
+[12/31] Building CXX object CMakeFiles/dpt.dir/reflect/android_app_Application.cpp.o
+[13/31] Building CXX object CMakeFiles/dpt.dir/reflect/android_app_ActivityThread.cpp.o
+[14/31] Building CXX object CMakeFiles/dpt.dir/reflect/android_app_ContextImpl.cpp.o
+[15/31] Building CXX object CMakeFiles/dpt.dir/dpt_jni.cpp.o
+[16/31] Building C object minizip-ng/CMakeFiles/minizip.dir/mz_crypt.c.o
+[17/31] Building C object minizip-ng/CMakeFiles/minizip.dir/mz_strm.c.o
+[18/31] Building C object minizip-ng/CMakeFiles/minizip.dir/mz_strm_buf.c.o
+[19/31] Building C object minizip-ng/CMakeFiles/minizip.dir/mz_os.c.o
+[20/31] Building C object minizip-ng/CMakeFiles/minizip.dir/mz_zip_rw.c.o
+[21/31] Building C object minizip-ng/CMakeFiles/minizip.dir/mz_strm_mem.c.o
+[22/31] Building C object minizip-ng/CMakeFiles/minizip.dir/mz_strm_zlib.c.o
+[23/31] Building C object minizip-ng/CMakeFiles/minizip.dir/mz_strm_split.c.o
+[24/31] Building C object minizip-ng/CMakeFiles/minizip.dir/mz_strm_pkcrypt.c.o
+[25/31] Building C object minizip-ng/CMakeFiles/minizip.dir/mz_os_posix.c.o
+C:/mm_dqx/github/redqx/android-packer/packer/gen1_v2/shell/src/main/cpp/minizip-ng/mz_os_posix.c:93:12: warning: returning 'char *' from a function with result type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+    return strdup(string);
+           ^~~~~~~~~~~~~~
+C:/mm_dqx/github/redqx/android-packer/packer/gen1_v2/shell/src/main/cpp/minizip-ng/mz_os_posix.c:202:12: warning: unused variable 'len' [-Wunused-variable]
+    size_t len = 0;
+           ^
+2 warnings generated.
+[26/31] Building CXX object CMakeFiles/dpt.dir/dpt.cpp.o
+[27/31] Building C object minizip-ng/CMakeFiles/minizip.dir/mz_zip.c.o
+[28/31] Building C object minizip-ng/CMakeFiles/minizip.dir/mz_strm_os_posix.c.o
+[29/31] Building C object minizip-ng/CMakeFiles/minizip.dir/mz_compat.c.o
+[30/31] Linking C static library minizip-ng\libminizip.a
+[31/31] Linking CXX shared library C:\mm_dqx\github\redqx\android-packer\packer\gen1_v2\shell\build\intermediates\cxx\Debug\e4d7213o\obj\x86\libdpt.so

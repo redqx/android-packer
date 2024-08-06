@@ -1,0 +1,67 @@
+ninja: Entering directory `C:\Users\tinyx\Downloads\dpt-shell-main-jeb\shell\.cxx\Debug\1s3z371p\x86'
+[1/59] Building CXX object CMakeFiles/dpt.dir/dpt_jni.cpp.o
+[2/59] Building CXX object CMakeFiles/dpt.dir/dpt_util.cpp.o
+[3/59] Building C object CMakeFiles/dpt.dir/rc4/rc4.c.o
+[4/59] Building CXX object CMakeFiles/dpt.dir/dpt_risk.cpp.o
+[5/59] Building CXX object CMakeFiles/dpt.dir/reflect/android_app_ActivityThread.cpp.o
+[6/59] Building CXX object CMakeFiles/dpt.dir/dex/dex_file.cpp.o
+[7/59] Building CXX object CMakeFiles/dpt.dir/dex/MultiDexCode.cpp.o
+[8/59] Building CXX object CMakeFiles/dpt.dir/reflect/dalvik_system_BaseDexClassLoader.cpp.o
+[9/59] Building CXX object CMakeFiles/dpt.dir/dex/CodeItem.cpp.o
+[10/59] Building CXX object CMakeFiles/dpt.dir/reflect/java_io_File.cpp.o
+[11/59] Building CXX object CMakeFiles/dpt.dir/reflect/dalvik_system_DexPathList.cpp.o
+[12/59] Building CXX object CMakeFiles/dpt.dir/reflect/java_util_ArrayList.cpp.o
+[13/59] Building CXX object CMakeFiles/dpt.dir/reflect/java_lang_Class.cpp.o
+[14/59] Building CXX object CMakeFiles/dpt.dir/reflect/android_app_Application.cpp.o
+[15/59] Building CXX object CMakeFiles/dpt.dir/reflect/android_content_pm_ApplicationInfo.cpp.o
+[16/59] Building CXX object CMakeFiles/dpt.dir/reflect/android_app_LoadedApk.cpp.o
+[17/59] Building CXX object CMakeFiles/dpt.dir/reflect/android_app_ContextImpl.cpp.o
+[18/59] Building C object bhook/CMakeFiles/bytehook.dir/bh_core.c.o
+[19/59] Building C object bhook/CMakeFiles/bytehook.dir/bh_dl_iterate.c.o
+[20/59] Building C object bhook/CMakeFiles/bytehook.dir/bh_hook_manager.c.o
+[21/59] Building C object bhook/CMakeFiles/bytehook.dir/bh_dl.c.o
+[22/59] Building C object bhook/CMakeFiles/bytehook.dir/bh_cfi.c.o
+[23/59] Building C object bhook/CMakeFiles/bytehook.dir/bh_elf_manager.c.o
+[24/59] Building CXX object CMakeFiles/dpt.dir/dpt_hook.cpp.o
+[25/59] Building C object bhook/CMakeFiles/bytehook.dir/bh_dl_monitor.c.o
+[26/59] Building C object bhook/CMakeFiles/bytehook.dir/bh_hook.c.o
+[27/59] Building CXX object CMakeFiles/dpt.dir/dpt.cpp.o
+[28/59] Building C object bhook/CMakeFiles/bytehook.dir/bh_elf.c.o
+[29/59] Building C object bhook/CMakeFiles/bytehook.dir/bh_log.c.o
+[30/59] Building C object bhook/CMakeFiles/bytehook.dir/bh_task.c.o
+[31/59] Building C object bhook/CMakeFiles/bytehook.dir/bh_linker.c.o
+[32/59] Building C object bhook/CMakeFiles/bytehook.dir/bh_sleb128.c.o
+[33/59] Building C object bhook/CMakeFiles/bytehook.dir/bh_task_manager.c.o
+[34/59] Building C object bhook/CMakeFiles/bytehook.dir/bh_recorder.c.o
+[35/59] Building C object bhook/CMakeFiles/bytehook.dir/bh_jni.c.o
+[36/59] Building C object bhook/CMakeFiles/bytehook.dir/bh_trampo.c.o
+[37/59] Building C object bhook/CMakeFiles/bytehook.dir/bh_trampo_x86_64.c.o
+[38/59] Building C object bhook/CMakeFiles/bytehook.dir/bytehook.c.o
+[39/59] Building C object bhook/CMakeFiles/bytehook.dir/bytesig.c.o
+[40/59] Building C object bhook/CMakeFiles/bytehook.dir/bh_trampo_arm64.c.o
+[41/59] Building C object bhook/CMakeFiles/bytehook.dir/bh_trampo_x86.c.o
+[42/59] Building C object bhook/CMakeFiles/bytehook.dir/bh_util.c.o
+[43/59] Building C object bhook/CMakeFiles/bytehook.dir/bh_trampo_arm.c.o
+[44/59] Building C object minizip-ng/CMakeFiles/minizip.dir/mz_strm_buf.c.o
+[45/59] Building C object minizip-ng/CMakeFiles/minizip.dir/mz_strm.c.o
+[46/59] Building C object minizip-ng/CMakeFiles/minizip.dir/mz_crypt.c.o
+[47/59] Building C object minizip-ng/CMakeFiles/minizip.dir/mz_strm_mem.c.o
+[48/59] Building C object minizip-ng/CMakeFiles/minizip.dir/mz_os.c.o
+[49/59] Building C object minizip-ng/CMakeFiles/minizip.dir/mz_strm_split.c.o
+[50/59] Building C object minizip-ng/CMakeFiles/minizip.dir/mz_strm_pkcrypt.c.o
+[51/59] Building C object minizip-ng/CMakeFiles/minizip.dir/mz_strm_os_posix.c.o
+[52/59] Building C object minizip-ng/CMakeFiles/minizip.dir/mz_os_posix.c.o
+C:/Users/tinyx/Downloads/dpt-shell-main-jeb/shell/src/main/cpp/minizip-ng/mz_os_posix.c:93:12: warning: returning 'char *' from a function with result type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+    return strdup(string);
+           ^~~~~~~~~~~~~~
+C:/Users/tinyx/Downloads/dpt-shell-main-jeb/shell/src/main/cpp/minizip-ng/mz_os_posix.c:202:12: warning: unused variable 'len' [-Wunused-variable]
+    size_t len = 0;
+           ^
+2 warnings generated.
+[53/59] Building C object minizip-ng/CMakeFiles/minizip.dir/mz_zip.c.o
+[54/59] Building C object minizip-ng/CMakeFiles/minizip.dir/mz_strm_zlib.c.o
+[55/59] Building C object minizip-ng/CMakeFiles/minizip.dir/mz_zip_rw.c.o
+[56/59] Linking C static library bhook\libbytehook.a
+[57/59] Building C object minizip-ng/CMakeFiles/minizip.dir/mz_compat.c.o
+[58/59] Linking C static library minizip-ng\libminizip.a
+[59/59] Linking CXX shared library C:\Users\tinyx\Downloads\dpt-shell-main-jeb\shell\build\intermediates\cxx\Debug\1s3z371p\obj\x86\libdpt.so

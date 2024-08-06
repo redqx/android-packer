@@ -1,0 +1,14 @@
+prefix=C:/Program Files (x86)/dpt
+exec_prefix=C:/Program Files (x86)/dpt
+libdir=C:/Program Files (x86)/dpt/lib
+sharedlibdir=C:/Program Files (x86)/dpt/lib
+includedir=C:/Program Files (x86)/dpt/include
+
+Name: minizip
+Description: Minizip zip file manipulation library
+Version: 3.0.9
+
+Requires: zlib
+Libs: -L${libdir} -L${sharedlibdir} -lminizip
+Libs.private: -lz
+Cflags: -I${includedir}

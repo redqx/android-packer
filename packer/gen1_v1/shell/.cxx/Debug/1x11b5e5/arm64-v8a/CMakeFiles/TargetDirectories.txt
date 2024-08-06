@@ -1,0 +1,14 @@
+C:/mm_dqx/github/redqx/android-packer/packer/gen1_v1/shell/.cxx/Debug/1x11b5e5/arm64-v8a/CMakeFiles/dpt.dir
+C:/mm_dqx/github/redqx/android-packer/packer/gen1_v1/shell/.cxx/Debug/1x11b5e5/arm64-v8a/CMakeFiles/install/local.dir
+C:/mm_dqx/github/redqx/android-packer/packer/gen1_v1/shell/.cxx/Debug/1x11b5e5/arm64-v8a/CMakeFiles/install.dir
+C:/mm_dqx/github/redqx/android-packer/packer/gen1_v1/shell/.cxx/Debug/1x11b5e5/arm64-v8a/CMakeFiles/edit_cache.dir
+C:/mm_dqx/github/redqx/android-packer/packer/gen1_v1/shell/.cxx/Debug/1x11b5e5/arm64-v8a/CMakeFiles/rebuild_cache.dir
+C:/mm_dqx/github/redqx/android-packer/packer/gen1_v1/shell/.cxx/Debug/1x11b5e5/arm64-v8a/CMakeFiles/list_install_components.dir
+C:/mm_dqx/github/redqx/android-packer/packer/gen1_v1/shell/.cxx/Debug/1x11b5e5/arm64-v8a/CMakeFiles/install/strip.dir
+C:/mm_dqx/github/redqx/android-packer/packer/gen1_v1/shell/.cxx/Debug/1x11b5e5/arm64-v8a/minizip-ng/CMakeFiles/install/strip.dir
+C:/mm_dqx/github/redqx/android-packer/packer/gen1_v1/shell/.cxx/Debug/1x11b5e5/arm64-v8a/minizip-ng/CMakeFiles/minizip.dir
+C:/mm_dqx/github/redqx/android-packer/packer/gen1_v1/shell/.cxx/Debug/1x11b5e5/arm64-v8a/minizip-ng/CMakeFiles/install/local.dir
+C:/mm_dqx/github/redqx/android-packer/packer/gen1_v1/shell/.cxx/Debug/1x11b5e5/arm64-v8a/minizip-ng/CMakeFiles/install.dir
+C:/mm_dqx/github/redqx/android-packer/packer/gen1_v1/shell/.cxx/Debug/1x11b5e5/arm64-v8a/minizip-ng/CMakeFiles/edit_cache.dir
+C:/mm_dqx/github/redqx/android-packer/packer/gen1_v1/shell/.cxx/Debug/1x11b5e5/arm64-v8a/minizip-ng/CMakeFiles/rebuild_cache.dir
+C:/mm_dqx/github/redqx/android-packer/packer/gen1_v1/shell/.cxx/Debug/1x11b5e5/arm64-v8a/minizip-ng/CMakeFiles/list_install_components.dir

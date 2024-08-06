@@ -1,0 +1,190 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.luoye.dpt"
+        minSdkVersion 21
+        targetSdkVersion 34
+        versionCode 1
+        versionName "1.0"
+
+        multiDexEnabled false
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        externalNativeBuild {
+            cmake {
+                cppFlags "-std=c++11"
+                abiFilters "armeabi-v7a","arm64-v8a","x86","x86_64"
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            debuggable false
+            jniDebuggable false
+        }
+
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            debuggable true
+            jniDebuggable true
+            renderscriptDebuggable true
+        }
+    }
+    externalNativeBuild {
+        cmake {
+            path "src/main/cpp/CMakeLists.txt"
+            version "3.18.1"
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+def afterAssembleCopy(Project project, Map archMap, boolean debug) {
+    def buildTypeName = "release"
+    def dexSourceDirName = "minifyReleaseWithR8"
+    if(debug) {
+        buildTypeName = "debug"
+        dexSourceDirName = "mergeDexDebug"
+    }
+    def sourceSoLibsDir = file(project.buildDir.absolutePath + File.separator
+            + "intermediates" + File.separator
+            + "stripped_native_libs" + File.separator
+            + buildTypeName + File.separator
+            + "out" + File.separator
+            + "lib" + File.separator
+    )
+    def targetDir = file(project.rootDir.absolutePath + File.separator + "executable" + File.separator + "shell-files")
+    def targetSoLibsDir = file(targetDir.absolutePath + File.separator + "libs")
+
+    println("[" + project.name + "] " + sourceSoLibsDir.absolutePath + " -> " + targetSoLibsDir.absolutePath)
+
+    def status = delete(fileTree(targetDir.absolutePath) {
+        include 'dex/classes.dex',"libs/**/*.so"
+    })
+
+    println("afterAssembleCopy shell-files delete status: " + status)
+
+    copy {
+        from project.buildDir.absolutePath + File.separator + "intermediates" + File.separator + "dex" + File.separator + buildTypeName + File.separator + dexSourceDirName + File.separator + "classes.dex"
+        into targetDir.absolutePath + File.separator + "dex"
+    }
+
+    for(e in archMap) {
+        copy {
+            from file(sourceSoLibsDir.absolutePath + File.separator
+                    + e.key)
+            into file(targetSoLibsDir.absolutePath + File.separator
+                    + e.value)
+        }
+    }
+}
+
+def afterNativeBuildCopy(Project project, Map archMap, boolean debug) {
+    def buildTypeName = "release"
+    if(debug) {
+        buildTypeName = "debug"
+    }
+    def sourceDir = file(project.buildDir.absolutePath + File.separator
+            + "intermediates" + File.separator
+            + "cmake" + File.separator
+            + buildTypeName + File.separator
+            + "obj" + File.separator)
+
+    def targetDir = file(project.projectDir.absolutePath + File.separator
+            + "src" + File.separator
+            + "main" + File.separator
+            + "assets" + File.separator
+            + "vwwwwwvwww")
+
+    println("[" + project.name + "] " + sourceDir.absolutePath + " -> " + targetDir.absolutePath)
+    def status = delete(fileTree(targetDir.absolutePath) {
+        include "/**/*.so"
+    })
+
+    println("afterNativeBuildCopy demo libs delete status: " + status)
+
+    for(e in archMap) {
+        copy {
+            from file(sourceDir.getAbsolutePath() + File.separator
+                    + e.key)
+            into file(targetDir.getAbsolutePath() + File.separator
+                    + e.value)
+        }
+    }
+}
+
+afterEvaluate { Project project ->
+    if (project.name != "shell") {
+        printf("project %s skip\n", project.name)
+        return
+    }
+
+    def assembleTask = project.tasks.getByName("assemble")
+    def assembleDebugTask = project.tasks.getByName("assembleDebug")
+    def assembleReleaseTask = project.tasks.getByName("assembleRelease")
+    def nativeDebugBuildTask = project.tasks.getByName("externalNativeBuildDebug")
+    def nativeReleaseBuildTask = project.tasks.getByName("externalNativeBuildRelease")
+
+    def archMap = [
+            "armeabi-v7a":"arm",
+            "arm64-v8a":"arm64",
+            "x86":"x86",
+            "x86_64":"x86_64"
+    ]
+
+    def list = project.gradle.startParameter.taskNames
+    if(list == null || list.size() == 0) {
+        return
+    }
+
+    def firstTaskName = list.get(0)
+
+    println("first task: " + firstTaskName)
+
+    def buildTask = assembleTask
+    def nativeBuildTask = nativeReleaseBuildTask
+    def debug = false
+    if(firstTaskName == "shell:assemble" || firstTaskName == "assemble") {
+        buildTask = assembleTask
+        nativeBuildTask = nativeReleaseBuildTask
+        debug = false
+    }
+    else if(firstTaskName == "shell:assembleRelease" || firstTaskName == "assembleRelease") {
+        buildTask = assembleReleaseTask
+        nativeBuildTask = nativeReleaseBuildTask
+        debug = false
+    }
+    else if(firstTaskName == "shell:assembleDebug" || firstTaskName == "assembleDebug") {
+        buildTask = assembleDebugTask
+        nativeBuildTask = nativeDebugBuildTask
+        debug = true
+    }
+
+    buildTask.doLast {
+        afterAssembleCopy(project, archMap, debug)
+    }
+
+    nativeBuildTask.doLast {
+        afterNativeBuildCopy(project, archMap, debug)
+    }
+
+}
+
+dependencies {
+
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation 'androidx.annotation:annotation:1.0.0'
+}

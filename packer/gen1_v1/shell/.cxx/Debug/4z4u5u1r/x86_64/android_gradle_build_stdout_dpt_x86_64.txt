@@ -1,0 +1,2 @@
+ninja: Entering directory `C:\Users\tinyx\Downloads\gen1_v1\shell\.cxx\Debug\4z4u5u1r\x86_64'
+ninja: no work to do.

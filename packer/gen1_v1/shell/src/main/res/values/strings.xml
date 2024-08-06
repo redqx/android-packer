@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">dpt</string>
+    <string name="welcome_text">[Wrong Info]\nshould not reach hear!</string>
+</resources>

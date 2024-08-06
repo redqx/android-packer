@@ -1,0 +1,3 @@
+ninja: Entering directory `C:\Users\tinyx\Downloads\gen1_v1\shell\.cxx\Debug\4z4u5u1r\armeabi-v7a'
+[1/2] Linking C static library minizip-ng\libminizip.a
+[2/2] Linking CXX shared library C:\Users\tinyx\Downloads\gen1_v1\shell\build\intermediates\cxx\Debug\4z4u5u1r\obj\armeabi-v7a\libdpt.so

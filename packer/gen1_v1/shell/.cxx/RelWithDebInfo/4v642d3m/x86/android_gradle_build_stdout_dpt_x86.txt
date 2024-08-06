@@ -1,0 +1,11 @@
+ninja: Entering directory `C:\Users\tinyx\Downloads\gen1_v1\shell\.cxx\RelWithDebInfo\4v642d3m\x86'
+[1/59] Building CXX object CMakeFiles/dpt.dir/dpt_util.cpp.o
+[2/59] Building CXX object CMakeFiles/dpt.dir/dpt_jni.cpp.o
+[3/59] Building CXX object CMakeFiles/dpt.dir/dpt_risk.cpp.o
+[4/59] Building C object CMakeFiles/dpt.dir/rc4/rc4.c.o
+[5/59] Building CXX object CMakeFiles/dpt.dir/reflect/dalvik_system_BaseDexClassLoader.cpp.o
+[6/59] Building CXX object CMakeFiles/dpt.dir/reflect/android_app_ActivityThread.cpp.o
+[7/59] Building CXX object CMakeFiles/dpt.dir/reflect/android_app_ContextImpl.cpp.o
+[8/59] Building CXX object CMakeFiles/dpt.dir/dex/CodeItem.cpp.o
+[9/59] Building CXX object CMakeFiles/dpt.dir/dex/MultiDexCode.cpp.o
+[10/59] Building CXX object CMakeFiles/dpt.dir/dex/dex_file.cpp.o
