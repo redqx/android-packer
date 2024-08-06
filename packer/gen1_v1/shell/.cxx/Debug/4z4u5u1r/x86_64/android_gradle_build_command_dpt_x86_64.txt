@@ -1,7 +1,0 @@
-Executable : C:\Users\tinyx\AppData\Local\Android\Sdk\cmake\3.18.1\bin\ninja.exe
-arguments : 
--C
-C:\Users\tinyx\Downloads\gen1_v1\shell\.cxx\Debug\4z4u5u1r\x86_64
-dpt
-jvmArgs : 
-

@@ -1,7 +1,0 @@
-Executable : C:\Users\tinyx\AppData\Local\Android\Sdk\cmake\3.18.1\bin\ninja.exe
-arguments : 
--C
-C:\mm_dqx\github\redqx\android-packer\packer\gen1_v2\shell\.cxx\Debug\e4d7213o\arm64-v8a
-dpt
-jvmArgs : 
-

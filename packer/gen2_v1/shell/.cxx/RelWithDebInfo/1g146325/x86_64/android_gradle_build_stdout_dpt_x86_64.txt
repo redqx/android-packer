@@ -1,2 +1,0 @@
-ninja: Entering directory `C:\Users\tinyx\Downloads\dpt-shell-main-jeb\shell\.cxx\RelWithDebInfo\1g146325\x86_64'
-ninja: no work to do.
